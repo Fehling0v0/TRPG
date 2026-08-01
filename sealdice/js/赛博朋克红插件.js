@@ -3,11 +3,11 @@
 // @author       Fehling0v0
 // @version      1.0.1
 // @description  指令：.cpr  .dv  .ri  .cprst .set cpr
-// @timestamp    1785586743
+// @timestamp    1785586883
 // 2026/8/1
 // @license      Apache-2
-// @homepageURL  https://raw.githubusercontent.com/Fehling0v0/TRPG/refs/heads/main/sealdice/js/%E8%B5%9B%E5%8D%9A%E6%9C%8B%E5%85%8B%E7%BA%A2%E6%8F%92%E4%BB%B6.js
-// @updateUrl    https://github.com/Fehling0v0/TRPG/blob/main/sealdice/js
+// @homepageURL  https://github.com/Fehling0v0/TRPG/blob/main/sealdice/js
+// @updateUrl    https://raw.githubusercontent.com/Fehling0v0/TRPG/refs/heads/main/sealdice/js/%E8%B5%9B%E5%8D%9A%E6%9C%8B%E5%85%8B%E7%BA%A2%E6%8F%92%E4%BB%B6.js
 // ==/UserScript==
 
 
