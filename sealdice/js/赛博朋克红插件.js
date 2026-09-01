@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         赛博朋克红核心规则插件
 // @author       Fehling0v0
-// @version      1.0.1
-// @description  指令：.cpr  .dv  .ri  .cprst .set cpr
+// @version      1.0.2
+// @description  指令：.cpr  .dv  .cpri  .cprst  .set cpr
 // @timestamp    1785586883
 // 2026/8/1
 // @license      Apache-2
@@ -15,9 +15,9 @@ const cprTemplate = {
     name:'cpr',
     fullName: '赛博朋克红核心规则插件',
     authors: ['Fehling0v0'],
-    version: '1.0.1',
+    version: '1.0.2',
     updatedTime: '',
-    templateVer: '1.0.1',
+    templateVer: '1.0.2',
     //.set 相关内容，使用.set cpr开启，切10面骰，并提示enableTip中的内容
     setConfig:{
         diceSides: 10,
@@ -313,7 +313,7 @@ cmdCpr.help = '赛博朋克红规则插件\n'+
 '.cpr 边缘行者 【职业】：以边缘行者方式生成一组属性\n'+
 '技能检定：\n'+
 '.dv 【难度值（可省略）】 【技能】 【修正（可省略，带+-符号）】\n'+
-'先攻：.ri\n'+
+'计算先攻值：.cpri  其他先攻队列功能请使用海豹自带的.ri .init指令\n'+
 '技能属性映射自定义：\n'+
 '.cprst 【技能】 【属性】：设置技能与属性的自定义映射\n'+
 '.cprst del 【技能】：删除技能的自定义映射\n'+
@@ -681,7 +681,7 @@ cmdCprst.solve = (ctx, msg, cmdArgs) => {
 }
 
 const cmdRi = seal.ext.newCmdItemInfo();
-cmdRi.name = 'ri'; 
+cmdRi.name = 'cpri'; 
 cmdRi.solve = (ctx, msg, cmdArgs) => {
     let [refVal] = seal.vars.intGet(ctx, "反应");
     if (refVal === null) refVal = 0;
@@ -699,4 +699,4 @@ cmdRi.solve = (ctx, msg, cmdArgs) => {
 ext.cmdMap["cpr"] = cmdCpr;
 ext.cmdMap["dv"] = cmdDv;
 ext.cmdMap["cprst"] = cmdCprst;
-ext.cmdMap["ri"] = cmdRi;
+ext.cmdMap["cpri"] = cmdRi;
